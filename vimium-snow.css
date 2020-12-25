@@ -1,0 +1,397 @@
+/*
+vimium-snow theme
+(c) 2020 Saïd Dermoumi
+https://github.com/dermoumi/vimium-snow
+*/
+
+/* #ui */
+/* ^ do not touch this line ^ */
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+/* .R,.DHM,.HM,.IHS,.IH,.BH,.MH {
+    color: #F0F;
+} */
+
+/* link hints */
+.LH {
+  border: 2px rgba(228, 202, 87, 0.5) solid;
+  background: unset;
+  margin-top: -2px;
+  margin-left: -2px;
+  color: #1f2731;
+  z-index: 0;
+  box-shadow: 0px 2px 11px rgb(0, 0, 0, 0.12);
+}
+
+.LH:before {
+  position: absolute;
+  background: rgba(255, 247, 121, 0.95);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+}
+
+.D .LH {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #43474d;
+}
+
+/* hints matching chars */
+.MC {
+  color: #cc5200;
+}
+
+.D .MC {
+  color: #e92626;
+}
+
+/* bottom hud */
+.HUD {
+  bottom: 1rem;
+  left: 1rem;
+  right: unset;
+  border-radius: 6px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  height: 1.5rem !important;
+  line-height: unset;
+  text-transform: lowercase;
+  color: #838686;
+  max-width: 420px;
+  min-width: unset;
+  line-height: 21px;
+  border: 3px rgba(0, 0, 0, 0.08) solid;
+  display: flex;
+  align-items: center;
+}
+
+.HUD.UI {
+  min-width: 180px;
+  align-items: unset;
+}
+
+.Omnibar {
+  padding-bottom: 20px;
+}
+
+.HUD:after {
+  border-radius: unset;
+  border: none;
+  background: rgba(247, 246, 246, 0.9);
+}
+
+.HUD.D {
+  border-color: rgba(80, 83, 84, 0.14);
+}
+
+.HUD.D:after {
+  background: rgba(10, 14, 20, 0.85);
+}
+
+/* #omni */
+/* ^ do not touch this line ^ */
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+.transparent {
+  opacity: 1;
+}
+
+body {
+  border-radius: 14px;
+  border: 3px rgba(0, 0, 0, 0.08) solid;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.075);
+}
+
+body.has-dark {
+  border-color: rgba(80, 83, 84, 0.14);
+}
+
+body:after {
+  border: unset;
+}
+
+#bar {
+  background: rgba(247, 246, 246, 0.99);
+  border-radius: unset;
+  border-bottom: unset;
+  height: 23px;
+  padding: 9px 10px;
+  padding-bottom: 7px;
+}
+
+.has-dark #bar {
+  background: rgba(10, 14, 20, 0.95);
+}
+
+#bar::before {
+  content: "❯";
+  display: inline-block;
+  width: 1rem;
+  height: 24px;
+  position: absolute;
+  left: 1rem;
+  z-index: 300;
+  font-size: 1rem;
+  padding: 4px 0;
+  line-height: 1.6em;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.has-dark #bar::before {
+  color: #d4d4d4;
+}
+
+#input {
+  border: none;
+  background: none;
+  box-shadow: unset;
+  font-size: 1rem;
+  color: #1f2731;
+  padding-left: 2rem;
+}
+
+.has-dark #input {
+  color: #ffffff;
+}
+
+#toolbar {
+  top: 7px;
+  right: 14px;
+}
+
+#toolbar .button {
+  height: 24px;
+  width: 24px;
+  padding: 5px;
+  cursor: pointer;
+  border: 3px transparent solid;
+  position: relative;
+  opacity: 0.5;
+  transition: 100ms ease-in-out opacity;
+}
+
+#toolbar .button:hover {
+  background: unset;
+  opacity: 1;
+}
+
+#toolbar .button > svg {
+  opacity: 0.5;
+}
+
+#toolbar .button#toggle-dark > svg {
+  transform: translateY(1px) rotate(45deg);
+}
+
+#toolbar .button#close > svg {
+  transform: scale(1.4);
+}
+
+#toolbar .button#toggle-dark .i-moon {
+  fill: unset;
+  stroke-width: 1.4;
+}
+
+#toolbar .button#toggle-dark .i-sun {
+  stroke-width: 2.1;
+}
+
+.has-dark #toolbar .button#toggle-dark .i-moon {
+  fill: #ddd8cd;
+  stroke: #ddd8cd;
+}
+
+.has-dark #toolbar .button#toggle-dark .i-sun {
+  fill: #ddd8cd;
+  stroke: #ddd8cd;
+}
+
+.has-dark #toolbar .button#close > svg {
+  fill: #ddd8cd;
+  stroke: #ddd8cd;
+}
+
+#list {
+  background: rgba(247, 246, 246, 0.99);
+  border-radius: unset;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.has-dark #list {
+  background: rgba(10, 14, 20, 0.95);
+}
+
+.item {
+  padding: 6px 10px;
+  padding-top: 3px;
+  margin: 0 5px;
+  margin-top: -2px;
+  border-radius: 6px;
+  border: unset;
+  border: 3px transparent solid;
+  height: 46px;
+}
+
+.item::before {
+  position: absolute;
+  background: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+}
+
+.item.s,
+.item:hover {
+  background-color: unset;
+  border: 3px rgba(0, 0, 0, 0.02) solid;
+}
+
+.has-dark .item.s,
+.has-dark .item:hover {
+  border: 3px rgba(80, 83, 84, 0.14) solid;
+}
+
+.item.s::before {
+  background-color: rgba(255, 255, 255, 0.836);
+}
+
+.item:hover::before {
+  background-color: #fff;
+}
+
+.has-dark .item.s::before {
+  background-color: rgba(80, 83, 84, 0.411);
+}
+
+.has-dark .item:hover::before {
+  background-color: rgba(80, 83, 84, 0.555);
+}
+
+.item .icon {
+  width: 24px;
+  height: 24px;
+  padding-right: unset;
+  margin-right: 10px;
+  margin-top: 5px;
+  background-position: bottom right;
+}
+
+.has-dark .item .icon {
+  fill: #ddd8cd;
+  stroke: #ddd8cd;
+}
+
+.item .icon path {
+  opacity: 0.25;
+  position: absolute;
+  z-index: -1;
+  transform-origin: 0px 0px;
+  transform: scale(0.75);
+}
+
+.item .top {
+  color: #838686;
+  position: relative;
+  height: 30px;
+}
+
+.has-dark .item .top {
+  color: #ddd8cd;
+}
+
+.item .top .title {
+  font-size: 0.85rem;
+  line-height: 0.8em;
+  margin-top: 2px;
+}
+
+.item .top .title match {
+  color: #505354;
+}
+
+.has-dark .item .top .title match {
+  color: #ffffff;
+}
+
+.item .top .title:empty::after {
+  content: "<blank>";
+}
+
+.item .bottom {
+  margin-top: -14px;
+  padding-left: 14px;
+}
+
+.item .bottom a {
+  color: #b6b8b8;
+  font-size: 0.6rem;
+}
+
+.has-dark .item .bottom a {
+  color: #4a545e;
+}
+
+.item .bottom a match {
+  color: #686c6d;
+}
+
+.has-dark .item .bottom a match {
+  color: #76808a;
+}
+
+/* #find */
+/* ^ do not touch this line ^ */
+
+* {
+  font-family: "JetBrains Mono", monospace !important;
+  background: unset;
+}
+
+:host,
+body {
+  background-color: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:host(.D),
+body.D {
+  background-color: unset !important;
+}
+
+.r {
+  color: #838686;
+  border: none;
+  border-radius: unset;
+  box-shadow: unset;
+  background: unset;
+  height: 10px;
+}
+
+.r.D {
+  background: unset;
+  color: #d4d4d4;
+}
+
+#i {
+  color: #1f2731;
+}
+
+.D #i {
+  color: #ffffff;
+}
