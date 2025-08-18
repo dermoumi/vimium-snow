@@ -184,7 +184,7 @@ body:after {
 #toolbar .button {
   height: 14px;
   width: 14px;
-  padding: 8px, 5px, 5px, 5px;
+  padding:8px,5px,5px,5px;
   cursor: pointer;
   border: 3px transparent solid;
   position: relative;
@@ -197,15 +197,15 @@ body:after {
   opacity: 1;
 }
 
-#toolbar .button>svg {
+#toolbar .button > svg {
   opacity: 0.5;
 }
 
-#toolbar .button#toggle-dark>svg {
+#toolbar .button#toggle-dark > svg {
   transform: translateY(1px) rotate(45deg);
 }
 
-#toolbar .button#close>svg {
+#toolbar .button#close > svg {
   transform: scale(1.4);
 }
 
