@@ -228,7 +228,7 @@ body:after {
   stroke: #ddd8cd;
 }
 
-.has-dark #toolbar .button#close>svg {
+.has-dark #toolbar .button#close > svg {
   fill: #ddd8cd;
   stroke: #ddd8cd;
 }
