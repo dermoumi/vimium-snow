@@ -129,7 +129,7 @@ body:after {
 }
 
 #bar.empty {
-  border-radius: 0rem;
+  border-radius: 0;
   border: none;
 }
 
